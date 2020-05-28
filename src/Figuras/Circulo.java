@@ -4,46 +4,44 @@
  * and open the template in the editor.
  */
 package Figuras;
-import Interface.*;
+import Interface.*;//importamos de el paquete interface todo
 /**
  *
  * @author Cristian Martinez
  */
-public class Circulo implements Figuras_geometricas {
+public class Circulo implements Figuras_geometricas {//creamos una clase llamada circulo implementando
     
-    private String nombre;
-    private int radio;
+    private String nombre;//creamos una variable de tipo string
+    private int radio;//creamos una variable de tipo entero llamada radio
     
-    public Circulo(){
-        
-    }
 
-    @Override
-    public void setNombre(String n) {
+    @Override//nos ayuda a sobreescribir el metodo
+    public void setNombre(String n) {//sobreescribimos el metodo
         nombre = n;
     }
 
-    @Override
-    public String getNombre() {
+    @Override//nos ayuda a sobreescribir el metodo
+    public String getNombre() {//sobreescribimos el metodo
         return nombre;
     }
 
-    @Override
-    public void tamaño(int x, int y) {
+    @Override//nos ayuda a sobreescribir el metodo
+    public void tamaño(int x, int y) {//sobreescribimos el metodo
         radio = x;
     }
 
-    @Override
-    public void getposicion() {
+    @Override//nos ayuda a sobreescribir el metodo
+    public void getposicion() {//sobreescribimos el metodo
         System.out.println("El radio del Circulo es: "+ radio);
     }
 
-    @Override
-    public Figuras_geometricas clonar() {
-        Figuras_geometricas geometrica = new Circulo();
-        geometrica.setNombre(nombre);
-        geometrica.tamaño(radio, radio);
-        return geometrica;
+    @Override//nos ayuda a sobreescribir el metodo
+    public Figuras_geometricas clonar() {//sobreescribimos el metodo
+        //comenzamos a clonar la figura
+        Figuras_geometricas geometrica = new Circulo();//Instanciamos la clase circulo para geometrica
+        geometrica.setNombre(nombre);//le asignamos a geometrica el nombre del ciculo
+        geometrica.tamaño(radio, radio);//le asignamos el radio a geometrica para que lo guarde en tamaño
+        return geometrica;//retornamos geometrica
     }
     
 }
